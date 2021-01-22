@@ -11,9 +11,11 @@ function App() {
     <Router>
       <div className="App">
         <Nav />
-        <Route exact path="/" component={Home}/>
-        <Route path="/upcoming" component={Upcoming}/>
-        <Route path="/cart" component={Cart}/>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route path="/upcoming" component={Upcoming}/>
+          <Route path="/cart" component={Cart}/>
+        </Switch>
       </div>
     </Router>
     
