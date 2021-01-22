@@ -1,12 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Nav() {
     return (
         <nav className="nav">
-            <h3>Fortnite Store</h3>
+            <Link to="/">
+                <h2>Fortnite Store</h2>
+            </Link>
             <ul className="nav-links"> 
-                <li>Upcoming</li>
-                <li>Cart</li>
+                <Link to="/upcoming">
+                    <li>Upcoming</li>
+                </Link>
+                <Link to="/cart">
+                    <li>Cart</li>
+                </Link>
             </ul>
         </nav>
     )
