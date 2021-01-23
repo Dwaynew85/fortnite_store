@@ -1,0 +1,13 @@
+fieldset {
+    background-color: plum;
+}
+
+img {
+    height: 70%;
+    width: 70%;
+}
+
+.itemBox {
+    display: inline-block;
+    width: 30%;
+}
