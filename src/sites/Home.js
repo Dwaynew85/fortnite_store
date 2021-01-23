@@ -17,7 +17,7 @@ function Upcoming() {
     }
 
     const shoppingList = items.map(item => (
-        <Item key={item.itemId} item={item} cost={item.store.cost} />
+        <Item key={item.itemId} item={item} />
     ))
 
     return (
