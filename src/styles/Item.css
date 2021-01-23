@@ -1,10 +1,18 @@
 fieldset {
     background-color: plum;
+    /* background: linear-gradient(90deg, rgba(0,0,0,.6), rgba(255,0,0,0) 50%),
+                linear-gradient(180deg, rgba(0,0,0,.6), rgba(0,255,0,0) 50%),
+                linear-gradient(270deg, rgba(0,0,0,.6), rgba(0,255,0,0) 50%),
+                linear-gradient(330deg, rgba(0,0,0,.6), rgba(0,0,255,0) 50%); */
 }
 
 img {
     height: 70%;
     width: 70%;
+}
+
+fieldset {
+    border-radius: 35px;
 }
 
 .itemBox {
