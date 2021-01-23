@@ -7,17 +7,17 @@ function Upcoming() {
         fetchItems()
     },[])
 
-    const [items, setItems] = useState([])
+    const [upcoming, setUpcoming] = useState([])
 
     const fetchItems = async () => {
         const data = await fetch("https://fortnite-api.theapinetwork.com/upcoming/get")
-        const list = await data.json();
-        const items = list.data;
-        console.log(items)
-        setItems(items);
+        const upcomingList = await data.json();
+        const upcoming = upcomingList.data;
+        console.log(upcoming)
+        setUpcoming(upcoming);
     }
 
-    const itemList = items.map(item => (
+    const itemList = upcoming.map(item => (
         <Item key={item.itemId} item={item}/>
     ))
 
