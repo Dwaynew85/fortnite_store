@@ -12,8 +12,7 @@ function Upcoming() {
     const fetchItems = async () => {
         const data = await fetch("https://fortnite-api.theapinetwork.com/store/get")
         const shoppingList = await data.json();
-        const shopItems = shoppingList.data;
-        setShopItems(shopItems);
+        setShopItems(shoppingList.data);
     }
 
     const shoppingList = items.map(item => (

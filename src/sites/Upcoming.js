@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Item from '../components/Item'
 
-function Upcoming() {
+function Upcoming({ match }) {
 
     useEffect(() => {
         fetchItems()
@@ -12,8 +12,7 @@ function Upcoming() {
     const fetchItems = async () => {
         const data = await fetch("https://fortnite-api.theapinetwork.com/upcoming/get")
         const upcomingList = await data.json();
-        const upcoming = upcomingList.data;
-        setUpcoming(upcoming);
+        setUpcoming(upcomingList.data);
     }
 
     const itemList = upcoming.map(item => (
