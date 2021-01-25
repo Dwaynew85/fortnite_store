@@ -13,16 +13,15 @@ function Upcoming() {
         const data = await fetch("https://fortnite-api.theapinetwork.com/upcoming/get")
         const upcomingList = await data.json();
         const upcoming = upcomingList.data;
-        console.log(upcoming)
         setUpcoming(upcoming);
     }
 
     const itemList = upcoming.map(item => (
         <Item key={item.itemId} item={item}/>
     ))
-
     return (
         <div>
+            <h1>See What's Coming Soon!</h1>
             {itemList}
         </div>
     )
