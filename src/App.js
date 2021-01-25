@@ -4,6 +4,7 @@ import Nav from './sites/Nav';
 import Home from './sites/Home';
 import Upcoming from './sites/Upcoming';
 import Cart from './sites/Cart';
+import Show from './components/Show'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route path="/upcoming" component={Upcoming}/>
           <Route path="/cart" component={Cart}/>
+          <Route path="/item/:id" component={Show} />
         </Switch>
       </div>
     </Router>
