@@ -5,14 +5,14 @@ function List({ match }) {
 
     useEffect(() => {
         fetchList()
-    }, []) // will not update when different site is clicked   
+    }, [match])
 
     const [lists, setShopLists] = useState([])
 
     const fetchList = async () => {
         const data = await fetch(`https://fortnite-api.theapinetwork.com${match.url}/get`)
         const shoppingList = await data.json();
-        console.log(lists)
+        console.log(match.url)
         setShopLists(shoppingList.data);
     }
 
