@@ -1,13 +1,16 @@
-export default (state = { cart: []}, action) => {
+const manageCart = (state = { cart: []}, action) => {
     switch (action.type) {
-
+        
     case "ADD_TO_CART":
-        return { ...state.cart, /* info to be added to state's cart */ };
-
+        console.log(action)
+        return { cart: state.cart.concat() };
     case "REMOVE_FROM_CART":
-        return {}
+        const cart = state.cart.filter(item => `${item.id}` !== action.id)
+        return { cart }
 
     default:
         return state
     }
 }
+
+export default manageCart
