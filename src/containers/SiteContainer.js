@@ -9,7 +9,6 @@ import { addToCart } from '../actions/cart'
 
 export class SiteContainer extends Component {
     render() {
-        console.log(this.props)
         return (
             <Router>
               <div className="App">
