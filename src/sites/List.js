@@ -1,23 +1,25 @@
 import React, {useState, useEffect} from 'react';
 import Item from '../components/Item'
+import { useLocation } from 'react-router-dom'
 
-function List({ match }) {
-
+function List(props) {
+    let location = useLocation();
+    
     useEffect(() => {
         const fetchList = async () => {
-            const data = await fetch(`https://fortnite-api.theapinetwork.com${match.url}/get`)
+            const data = await fetch(`https://fortnite-api.theapinetwork.com${location.pathname}/get`)
             const shoppingList = await data.json();
             setShopLists(shoppingList.data);
         }
         fetchList();
-    }, [match])
+    }, [location])
 
     const [lists, setShopLists] = useState([])
 
     
 
     const shoppingList = lists.map(list => (
-        <Item key={list.listId} item={list} />
+        <Item key={list.listId} item={list} addToCart={props.addToCart}/>
     ))
 
     return (
