@@ -1,8 +1,8 @@
 import React from 'react'
 
 function ItemDetail(props) {
-    const { item } = props
-    console.log(item)
+    const { item, addToCart } = props
+    
     return (
         <div>
             <img src={item.images.background} alt={item.name} />
@@ -11,6 +11,7 @@ function ItemDetail(props) {
             <h2>{item.description}</h2>
             <h3>${item.cost}</h3>
             <h4>Average Stars: {item.ratings.avgStars} TotalPoints: {item.ratings.totalPoints} Votes: {item.ratings.numberVotes}</h4>
+            <button onClick={(e) => addToCart(item)}>ItemDetail Working</button>
         </div>
     )
 }

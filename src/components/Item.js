@@ -11,6 +11,7 @@ function Item(props) {
                 <h2>{props.item.store ? "$" + props.item.store.cost : item.cost}</h2>
                 <h3>{item.description ? item.description : item.name}</h3>
                 <img src={item.images.icon} alt={item.series} />
+                <button onClick={(e) => props.addToCart(item)}>From Item - Working. Update reducer</button>
             </fieldset>
         </div>
     )
