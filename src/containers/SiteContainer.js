@@ -5,19 +5,23 @@ import Cart from '../sites/Cart';
 import Show from '../components/Show'
 import { Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux'
-import { addToCart } from '../actions/cart'
 
 export class SiteContainer extends Component {
     render() {
-        console.log(this.props)
         return (
           <div className="App">
             <Nav />
             <Switch>
-              <Route exact path="/store" component={List}/>
-              <Route path="/upcoming" component={List}/>
-              <Route path="/cart" component={Cart}/>
-              <Route path="/item/:id" component={Show} />
+              <Route path="/store">
+                <List addToCart={this.props.addToCart}/>
+              </Route>
+              <Route path="/upcoming">
+                <List addToCart={this.props.addToCart}/>
+              </Route>
+              <Route path="/cart" component={Cart}/> {/* needs cart state  */}
+              <Route path="/item/:id">
+                <Show addToCart={this.props.addToCart}/>
+              </Route>
             </Switch>
           </div>
         );
@@ -31,4 +35,9 @@ const mapStateToProps = state => {
     }
   }
 
-export default connect(mapStateToProps,{addToCart})(SiteContainer);
+  const mapDispatchToProps = dispatch => ({
+    addToCart: item => dispatch({ type: "ADD_TO_CART", item}),
+    deleteFromCart: id => dispatch({ type: "DELETE_FROM_CART", id})
+  })
+
+export default connect(mapStateToProps, mapDispatchToProps)(SiteContainer);
