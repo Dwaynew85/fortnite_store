@@ -15,11 +15,14 @@ function List(props) {
     }, [location])
 
     const [lists, setShopLists] = useState([])
-
     
-
+    const addIdToList = (list, id) => {
+        list.item.id = id;
+        return list.item
+    }
+    
     const shoppingList = lists.map(list => (
-        <Item key={list.listId} item={list} addToCart={props.addToCart}/>
+        <Item key={list.itemId} item={addIdToList(list, list.itemId)} cost={list.item.cost ? "Price not available, but it ain't free!" : list.store.cost} addToCart={props.addToCart} />
     ))
 
     return (
