@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 
 export class SiteContainer extends Component {
     render() {
+      debugger
         return (
           <div className="App">
             <Nav />
@@ -18,7 +19,9 @@ export class SiteContainer extends Component {
               <Route path="/upcoming">
                 <List addToCart={this.props.addToCart}/>
               </Route>
-              <Route path="/cart" component={Cart}/> {/* needs cart state  */}
+              <Route path="/cart">
+                <Cart cart={this.props.cart}/>
+              </Route>
               <Route path="/item/:id">
                 <Show addToCart={this.props.addToCart}/>
               </Route>
