@@ -18,7 +18,7 @@ function List(props) {
     const [lists, setShopLists] = useState([])
     
     const shoppingList = lists.map(list => (
-        <Item key={list.itemId} item={addIdToItem(list.item, list.itemId)} cost={list.item.cost ? "Price not available, but it ain't free!" : list.store.cost} addToCart={props.addToCart} />
+        <Item key={list.itemId} item={addIdToItem(list.item, list.itemId)} cost={list.item.cost ? 0 : list.store.cost} addToCart={props.addToCart} />
     ))
 
     return (

@@ -12,7 +12,7 @@ function ItemDetail(props) {
             <h3>${item.cost}</h3>
             <h4>Average Stars: {item.ratings.avgStars} TotalPoints: {item.ratings.totalPoints} Votes: {item.ratings.numberVotes}</h4>
             {/* add video tag {item.media....} */}
-            <button onClick={(e) => addToCart(item)}>ItemDetail Working</button>
+            {item.cost === 0 ? "-Not Yet Available For Purchase-" : <button onClick={(e) => addToCart(item)}>ItemDetail Working</button>}
         </div>
     )
 }
