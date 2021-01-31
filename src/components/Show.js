@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
+import { addIdToItem } from '../actions/index'
 
 function Show(props) {
     let params = useParams();
@@ -15,10 +16,9 @@ function Show(props) {
         fetchItem();
     }, [])
 
-    
     return (
         <div>
-            {item.name ? <ItemDetail item={item} addToCart={props.addToCart} /> : <h3>Loading...</h3> }
+            {item.name ? <ItemDetail item={addIdToItem(item, params.id)} addToCart={props.addToCart} /> : <h3>Loading...</h3> }
         </div>
     )
 }

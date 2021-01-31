@@ -2,7 +2,7 @@ import React from 'react'
 
 function ItemDetail(props) {
     const { item, addToCart } = props
-    console.log(item.media.length > 0 ? item.media[0].src : "no media")
+    
     return (
         <div>
             <img src={item.images.background} alt={item.name}/>

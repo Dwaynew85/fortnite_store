@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Item from '../components/Item'
 import { useLocation } from 'react-router-dom'
+import { addIdToItem } from '../actions/index'
 
 function List(props) {
     let location = useLocation();
@@ -16,13 +17,8 @@ function List(props) {
 
     const [lists, setShopLists] = useState([])
     
-    const addIdToList = (list, id) => {
-        list.item.id = id;
-        return list.item
-    }
-    
     const shoppingList = lists.map(list => (
-        <Item key={list.itemId} item={addIdToList(list, list.itemId)} cost={list.item.cost ? "Price not available, but it ain't free!" : list.store.cost} addToCart={props.addToCart} />
+        <Item key={list.itemId} item={addIdToItem(list.item, list.itemId)} cost={list.item.cost ? "Price not available, but it ain't free!" : list.store.cost} addToCart={props.addToCart} />
     ))
 
     return (
