@@ -8,7 +8,6 @@ import { connect } from 'react-redux'
 
 export class SiteContainer extends Component {
     render() {
-      debugger
         return (
           <div className="App">
             <Nav />
