@@ -7,12 +7,9 @@ function Cart(props) {
         <CartLi key={list.id} item={list} delete={props.delete} />
     ))
 
-    const totalCost = () => {
-        let costs = props.cart.map(item => item.cost)
-        costs.reduce(function(acc, cur) {
-            return acc + cur;
-        })
-    }
+    const totalCost = props.cart.map(item => item.cost).reduce(function(acc, cur) {
+        return acc + cur;
+    });
     
 
     return (
@@ -26,7 +23,7 @@ function Cart(props) {
             <ul>
                 {cartLists}
             </ul>
-            <h3>Total: {totalCost}</h3> {/* not working */}
+            <h3>Total: ${totalCost}</h3> {/* not working */}
         </div>
     )
 }
