@@ -13,13 +13,13 @@ export class SiteContainer extends Component {
             <Nav />
             <Switch>
               <Route path="/store">
-                <List addToCart={this.props.addToCart}/>
+                <List/>
               </Route>
               <Route path="/upcoming">
-                <List addToCart={this.props.addToCart}/>
+                <List/>
               </Route>
               <Route path="/cart">
-                <Cart cart={this.props.cart}/>
+                <Cart cart={this.props.cart} delete={this.props.deleteFromCart}/>
               </Route>
               <Route path="/item/:id">
                 <Show addToCart={this.props.addToCart}/>
