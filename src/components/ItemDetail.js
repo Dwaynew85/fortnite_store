@@ -4,7 +4,7 @@ function ItemDetail(props) {
     const { item, addToCart } = props
     
     return (
-        <div>
+        <div className ="rarity" style={{backgroundImage: `url(${item.background})`}}>
             <img src={item.images.background} alt={item.name}/>
             <h1>{item.name}</h1>
             <p>{item.type}</p>
