@@ -1,4 +1,4 @@
-const manageCart = (state = { cart: []}, action) => {
+const manageCart = (state = { cart: []}, action) => {    
     switch (action.type) {
         
     case "ADD_TO_CART":
