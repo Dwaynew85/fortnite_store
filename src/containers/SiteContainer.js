@@ -39,7 +39,7 @@ const mapStateToProps = state => {
 
   const mapDispatchToProps = dispatch => ({
     addToCart: item => dispatch({ type: "ADD_TO_CART", item}),
-    deleteFromCart: id => dispatch({ type: "DELETE_FROM_CART", id})
+    deleteFromCart: item => dispatch({ type: "DELETE_FROM_CART", item})
   })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SiteContainer);
