@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function CartLi(props) {
-    console.log(props)
     const {item} = props
     return (
         <li>
