@@ -22,7 +22,7 @@ export class SiteContainer extends Component {
                 <Cart cart={this.props.cart} delete={this.props.deleteFromCart}/>
               </Route>
               <Route path="/item/:id">
-                <Show addToCart={this.props.addToCart}/>
+                <Show addToCart={this.props.addToCart} cart={this.props.cart}/>
               </Route>
             </Switch>
           </div>
