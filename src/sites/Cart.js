@@ -26,6 +26,8 @@ function Cart(props) {
                 <br/>
                 <label>Address: </label>
                 <input type="address" name="address" placeholder="Enter Full Address"/>
+                <br/>
+                <label>-Card Info Would Go Here-</label>
             </form>
             <ul>
                 {cartLists}
