@@ -10,7 +10,7 @@ export class SiteContainer extends Component {
     render() {
         return (
           <div className="App">
-            <Nav />
+            <Nav cart={this.props.cart} />
             <Switch>
               <Route path="/store">
                 <List/>
