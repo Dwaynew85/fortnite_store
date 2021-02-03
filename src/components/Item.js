@@ -2,8 +2,7 @@ import React from 'react';
 import '../styles/Item.css';
 import { Link } from 'react-router-dom';
 
-function Item(props) {
-    const {item, cost} = props
+function Item({item, cost}) {
     return (
         <div className="itemBox">
             <Link to={`/item/${item.id}`}>
