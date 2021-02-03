@@ -19,7 +19,7 @@ export class SiteContainer extends Component {
                 <List/>
               </Route>
               <Route path="/cart">
-                <Cart cart={this.props.cart} delete={this.props.deleteFromCart}/>
+                <Cart cart={this.props.cart} deleteFromCart={this.props.deleteFromCart}/>
               </Route>
               <Route path="/item/:id">
                 <Show addToCart={this.props.addToCart} cart={this.props.cart}/>
