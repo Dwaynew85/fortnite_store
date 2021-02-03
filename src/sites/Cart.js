@@ -11,10 +11,18 @@ function Cart(props) {
     const totalCost = props.cart.length === 0 ? 0 : props.cart.map(item => item.cost).reduce(function(acc, cur) {
         return acc + cur;
     });  
-
+    
+    const orderItems = () => {
+        return (
+            props.cart.map(item => (
+                (({ name, cost, images }) => ({ name, cost, images }))(item)
+            ))
+           )            
+    }
+    
     return (
         <div>
-            <CartInput cart={props.cart}/>
+            <CartInput cart={orderItems()} total={totalCost}/>
             <ul>
                 {cartLists}
             </ul>
