@@ -3,7 +3,7 @@ import Item from '../components/Item'
 import { useLocation } from 'react-router-dom'
 import { addIdToItem } from '../actions/index'
 
-function List(props) {
+function List() {
     let location = useLocation();
     
     useEffect(() => {
