@@ -2,11 +2,16 @@ import React, { Component } from 'react'
 
 export class CartInput extends Component {
     state = {
-        firstName: '',
-        lastName: '',
-        eMail: '',
-        address: '',
-        order: {}
+        user: {
+            firstName: '',
+            lastName: '',
+            eMail: '',
+            address: ''
+        },
+        order: {
+            total: this.props.total,
+            items: this.props.cart
+        }
     }
 
     handleChange = event => {
@@ -17,32 +22,33 @@ export class CartInput extends Component {
     }
 
     render() {
-        console.log(this.props)
+        const { firstName, lastName, eMail, address } = this.state
+        console.log(this.state)
         return (
             <form>
              <label>First Name: </label>   
              <input type="text" 
-                value={this.state.firstName} 
+                value={firstName} 
                 name="firstName"
                 onChange={event => this.handleChange(event)}
             />
              <label>Last Name: </label>   
              <input type="text" 
-                value={this.state.lastName} 
+                value={lastName} 
                 name="lastName"
                 onChange={event => this.handleChange(event)}
             />
              <br/>
              <label>Email: </label>
              <input type="email" 
-                value={this.state.email} 
+                value={eMail} 
                 name="eMail"
                 onChange={event => this.handleChange(event)}
             />
              <br/>
              <label>Address: </label>
              <input type="text" 
-                value={this.state.address} 
+                value={address} 
                 name="address" 
                 placeholder="Enter Full Address"
                 onChange={event => this.handleChange(event)}
