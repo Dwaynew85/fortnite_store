@@ -2,19 +2,19 @@ import React from 'react'
 import CartLi from '../components/CartLi'
 import CartInput from '../components/CartInput'
 
-function Cart(props) {
+function Cart({cart, deleteFromCart }) {
 
-    const cartLists = props.cart.map(list => (
-        <CartLi key={list.id} item={list} delete={props.delete} />
+    const cartLists = cart.map(list => (
+        <CartLi key={list.id} item={list} deleteFromCart={deleteFromCart} />
     ))
 
-    const totalCost = props.cart.length === 0 ? 0 : props.cart.map(item => item.cost).reduce(function(acc, cur) {
+    const totalCost = cart.length === 0 ? 0 : cart.map(item => item.cost).reduce(function(acc, cur) {
         return acc + cur;
     });  
     
     const orderItems = () => {
         return (
-            props.cart.map(item => (
+            cart.map(item => (
                 (({ name, cost, images }) => ({ name, cost, images }))(item)
             ))
            )            
