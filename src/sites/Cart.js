@@ -15,7 +15,7 @@ function Cart({cart, deleteFromCart }) {
     const orderItems = () => {
         return (
             cart.map(item => (
-                (({ name, cost, images, id }) => ({ name, cost, images, id }))(item)
+                (({ name, cost, images: { icon }}) => ({ name, cost, icon}))(item)
             ))
            )            
     }
