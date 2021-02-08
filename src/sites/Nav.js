@@ -14,6 +14,9 @@ export default function Nav({cart}) {
                 <Link to="/cart">
                     {cart.length === 0 ? '' : <li>Cart({cart.length})</li> }
                 </Link>
+                <Link to="/history">
+                    <li>Order History</li>
+                </Link>
             </ul>
         </nav>
     )
