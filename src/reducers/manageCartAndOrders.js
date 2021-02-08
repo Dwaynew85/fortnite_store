@@ -23,10 +23,7 @@ const manageCartAndOrdersReducer = (state = { cart: [], orders: [], requesting: 
         case 'ADD_ORDERS':
             return {
                 ...state,
-                orders: [
-                    ...state.orders,
-                    action.orders
-                ],
+                orders: action.orders,
                 requesting: false
             }
 
