@@ -28,7 +28,7 @@ export class SiteContainer extends Component {
                 <Show addToCart={this.props.addToCart} cart={this.props.cart}/>
               </Route>
               <Route path="/history">
-                <OrderHistory fetchOrders={this.props.fetchOrders}/>
+                <OrderHistory fetchOrders={this.props.fetchOrders} orders={this.props.orders}/>
               </Route>
             </Switch>
           </div>
