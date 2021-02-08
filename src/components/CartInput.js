@@ -26,8 +26,20 @@ export class CartInput extends Component {
     }
 
     handleSubmit = (event, state) => {
-        event.preventDefault();
+        // event.preventDefault();
         submitOrder(state)
+        this.setState({
+            user: {
+                first_name: '',
+                last_name: '',
+                email: '',
+                address: ''
+            },
+            order: {
+                total: this.props.total,
+                items: this.props.cart
+            }
+        })
     }
     
     render() {
