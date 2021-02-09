@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import Item from '../components/Item'
-import { useLocation } from 'react-router-dom'
-import { addIdToItem } from '../actions/index'
+import Item from '../components/Item';
+import { useLocation } from 'react-router-dom';
+import { addIdToItem } from '../actions/index';
+import '../styles/Item.css';
 
 function List() {
     let location = useLocation();
