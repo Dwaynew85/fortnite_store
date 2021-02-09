@@ -1,8 +1,9 @@
 import React from 'react'
 import CartLi from '../components/CartLi'
 import CartInput from '../components/CartInput'
+import '../styles/Cart.css'
 
-function Cart({cart, deleteFromCart }) {
+function Cart({ cart, deleteFromCart }) {
 
     const cartLists = cart.map(list => (
         <CartLi key={list.id} item={list} deleteFromCart={deleteFromCart} />
