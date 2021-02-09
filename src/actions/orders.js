@@ -18,7 +18,6 @@ export const submitOrder = async (order) => {
     
 }
 
-// function to send GET request for orders in backend. to be run when app mounts
 export const fetchOrders = () => {
     return async (dispatch) => {
         dispatch({ type: 'START_ADDING_ORDERS_REQUEST'});        
@@ -27,5 +26,3 @@ export const fetchOrders = () => {
             .then(orders => dispatch({ type: 'ADD_ORDERS', orders }));      
     };
 }
-
-// function to clear state after form is submitted 
