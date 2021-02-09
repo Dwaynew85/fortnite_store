@@ -5,7 +5,7 @@ export default function OrderLi({user, items, total}) {
     const itemLi = items.map(item => {
         return (
             <li>
-                <img src={item.icon} alt={item.name}></img>
+                <img className="item-icon" src={item.icon} alt={item.name}></img>
                 <h6>{item.name}</h6>
                 <h6>{item.cost}</h6>
             </li>
