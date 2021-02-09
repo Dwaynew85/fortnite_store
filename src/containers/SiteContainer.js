@@ -4,7 +4,7 @@ import List from '../sites/List';
 import Cart from '../sites/Cart';
 import OrderHistory from '../sites/OrderHistory'
 import Show from '../components/Show'
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { fetchOrders } from '../actions/orders'
 
@@ -15,6 +15,9 @@ export class SiteContainer extends Component {
           <div className="App">
             <Nav cart={this.props.cart} />
             <Switch>
+              <Route exact path="/">
+                <Redirect to="/store"/>
+              </Route>
               <Route path="/store">
                 <List/>
               </Route>
