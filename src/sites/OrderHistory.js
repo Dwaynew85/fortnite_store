@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
-import OrderLi from '../components/OrderLi'
+import OrderLi from '../components/OrderLi';
+import '../styles/OrderHistory.css'
 
 export default function OrderHistory({fetchOrders, orders}) {
     

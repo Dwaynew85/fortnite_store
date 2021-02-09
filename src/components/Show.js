@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
-import { addIdToItem } from '../actions/index'
+import { addIdToItem } from '../actions/index';
+import '../styles/ItemDetail.css';
 
 function Show({ addToCart, cart }) {
     let params = useParams();
