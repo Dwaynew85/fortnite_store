@@ -1,4 +1,5 @@
-const manageCartAndOrdersReducer = (state = { cart: [], orders: [], requesting: false}, action) => {
+const initialState = { cart: [], orders: [], requesting: false}
+const manageCartAndOrdersReducer = (state = initialState , action) => {
     switch (action.type) {
 
         case "ADD_TO_CART":
@@ -26,6 +27,9 @@ const manageCartAndOrdersReducer = (state = { cart: [], orders: [], requesting: 
                 orders: action.orders,
                 requesting: false
             }
+
+        case 'RESET':
+            return initialState
 
         default:
             return state
