@@ -9,7 +9,7 @@ export default function OrderHistory({fetchOrders, orders}) {
     }, [fetchOrders])
 
     const ordersList = orders.map(order => (
-        <li><OrderLi key={order.id} user={order.user} items={order.items} total={order.total} /></li>
+        <li><OrderLi key={order.id} user={order.user} items={order.items} total={order.total} created={order.created_at} /></li>
     ))
 
     return (
