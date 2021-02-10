@@ -3,8 +3,7 @@ import CartLi from '../components/CartLi'
 import CartInput from '../components/CartInput'
 import '../styles/Cart.css'
 
-function Cart({ cart, deleteFromCart }) {
-
+function Cart({ cart, deleteFromCart, reset }) {
     const cartLists = cart.map(list => (
         <CartLi key={list.id} item={list} deleteFromCart={deleteFromCart} />
     ))
@@ -16,14 +15,14 @@ function Cart({ cart, deleteFromCart }) {
     const orderItems = () => {
         return (
             cart.map(item => (
-                (({ name, cost, images: { icon }}) => ({ name, cost, icon}))(item)
+                (({ name, cost, images: { background }}) => ({ name, cost, background}))(item)
             ))
            )            
     }
     
     return (
         <div>
-            <CartInput cart={orderItems()} total={totalCost}/>
+            <CartInput cart={orderItems()} reset={reset} total={totalCost}/>
             <ul>
                 {cartLists}
             </ul>
