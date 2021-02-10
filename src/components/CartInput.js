@@ -9,10 +9,6 @@ export class CartInput extends Component {
             email: '',
             address: ''
         },
-        order: {
-            total: this.props.total,
-            items: this.props.cart
-        }
     }
 
     handleChange = event => {
@@ -26,8 +22,11 @@ export class CartInput extends Component {
     }
 
     handleSubmit = (event, state) => {
-        // event.preventDefault();
-        submitOrder(state)
+        event.preventDefault();
+        submitOrder({...state, order: {
+            total: this.props.total,
+            items: this.props.cart
+        }})
         this.setState({
             user: {
                 first_name: '',
@@ -35,14 +34,12 @@ export class CartInput extends Component {
                 email: '',
                 address: ''
             },
-            order: {
-                total: this.props.total,
-                items: this.props.cart
-            }
         })
+        this.props.reset()
     }
     
     render() {
+        console.log(this.state.cart)
         const { first_name, last_name, email, address } = this.state.user
         console.log(this.state)
         return (
