@@ -25,7 +25,7 @@ export class SiteContainer extends Component {
                 <List/>
               </Route>
               <Route path="/cart">
-                <Cart cart={this.props.cart} deleteFromCart={this.props.deleteFromCart}/>
+                <Cart cart={this.props.cart} deleteFromCart={this.props.deleteFromCart} reset={this.props.reset}/>
               </Route>
               <Route path="/item/:id">
                 <Show addToCart={this.props.addToCart} cart={this.props.cart}/>
@@ -50,6 +50,7 @@ const mapStateToProps = state => {
   const mapDispatchToProps = dispatch => ({
     addToCart: item => dispatch({ type: "ADD_TO_CART", item}),
     deleteFromCart: item => dispatch({ type: "DELETE_FROM_CART", item}),
+    reset: () => dispatch({ type: "RESET"}),
     fetchOrders: () => dispatch(fetchOrders())
   })
 
