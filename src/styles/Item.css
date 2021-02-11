@@ -9,15 +9,15 @@ fieldset {
 
 .itemBox {
     box-sizing: border-box;
-    width: 33.333%;
+    width: 25%;
     float: left;
-    padding: 15px;
-    /* display: inline-block;
-    height: auto; */
+    padding: 15px;    
+    /* height needs to be adjusted regardless of */
 }
 
 .itemBox:hover {
     filter: brightness(60%);
+    transform: scale(1.1);
     
 }
 
