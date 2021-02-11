@@ -1,0 +1,20 @@
+#nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height:  10vh;
+    background: #000;
+    background-image: url('https://i.imgur.com/cNM7FZp.png?1');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    background-attachment: cover; 
+  }
+  
+  .nav-links {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
