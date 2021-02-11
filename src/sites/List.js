@@ -24,7 +24,6 @@ function List() {
 
     return (
         <div>
-            <h1>Shop Here</h1>
             {shoppingList}
         </div>
     )
