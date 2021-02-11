@@ -3,7 +3,7 @@ import React from 'react'
 function ItemDetail({ item, cart, addToCart }) {
     
     return (
-        <fieldset className ="rarity" style={{backgroundImage: `url(${item.background})`}}>
+        <fieldset className ="rarity item-box" style={{backgroundImage: `url(${item.background})`}}>
             {item.media.length >=1 ? <video width="20%" height="20%" controls autoplay loop><source src={item.media[0].src} type="video/mp4" autoplay/></video> : ""}
             <legend><h1>{item.name}</h1></legend>
             <img className='detail-img' src={item.images.background} alt={item.name}/>
