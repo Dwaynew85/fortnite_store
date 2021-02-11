@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Item.css';
 import { Link } from 'react-router-dom';
 
 function Item({item, cost}) {
