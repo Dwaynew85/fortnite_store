@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/Nav.css'
 
 export default function Nav({cart}) {
     return (
-        <nav className="nav">
+        <nav id="nav">
             <Link to="/store">
                 <h2>Fortnite Store</h2>
             </Link>
