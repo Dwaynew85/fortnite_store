@@ -23,7 +23,7 @@ function List() {
     ))
 
     return (
-        <div>
+        <div className="itemDiv">
             {shoppingList}
         </div>
     )
