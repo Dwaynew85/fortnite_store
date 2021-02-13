@@ -21,8 +21,7 @@ fieldset {
 
 .itemBox:hover {
     filter: contrast(200%);
-    transform: scale(1.1);
-    
+    transform: scale(1.1);    
 }
 
 .rarity {
@@ -30,14 +29,26 @@ fieldset {
     background-size: 100% 100%;
 }
 
-@media only screen and (max-width: 900px) {
-    .itemBox {
-        width: 50%;
+@media only screen and (max-width: 985px) {
+    .itemDiv {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .itemBox {
-        width: 100%;
+@media only screen and (max-width: 700px) {
+    .itemDiv {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .itemDiv {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .itemDiv {
+        grid-template-columns: none;
     }
 }
