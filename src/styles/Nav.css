@@ -1,20 +1,45 @@
-#nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height:  10vh;
+#link-left {
+    float: left;
+    font-size: 250%;
+    margin: 15px auto;
+    margin-left: 20px;
+  }
+  
+  #link-right {
+    float: right;
+    margin: 0 20px;
+  }
+  
+  #nav {
+    min-height:  9vh;
     background: #000;
     background-image: url('https://i.imgur.com/cNM7FZp.png?1');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 100%;
+    background-size: contain;
     background-attachment: cover; 
   }
   
   .nav-links {
+    float: right;
     width: 40%;
-    display: flex;
     justify-content: space-around;
-    align-items: center;
-    list-style: none;
   }
+
+  @media only screen and (max-width: 1360px) {
+    #link-right {
+        margin: 0;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1160px) {
+  #link-right {
+        clear: right;      
+  }
+  #nav {
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+}
