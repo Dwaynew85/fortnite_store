@@ -13,6 +13,7 @@ fieldset {
     grid-row-gap: 20px;
     grid-column-gap: 15px;
     clear: both;
+    text-align: center;
 
 }
 
@@ -23,6 +24,18 @@ fieldset {
 .itemBox:hover {
     filter: contrast(200%);
     transform: scale(1.1);    
+}
+
+.item-text {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    width: 100%;
+    bottom: 0px;
+    border-radius: 35px;
+    -webkit-text-stroke: .2px plum;
+    letter-spacing: 1px;
+
 }
 
 .rarity {
