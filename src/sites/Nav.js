@@ -9,14 +9,14 @@ export default function Nav({cart}) {
                 <h1 className="title-icon" id="link-left">Fortnite Store</h1>
             </Link>
             <ul className="nav-links"> 
+                <Link to="/history">
+                    <li className="title-icon" id="link-right">Order History</li>
+                </Link>
                 <Link to="/upcoming">
                     <li className="title-icon" id="link-right">Upcoming</li>
                 </Link>
                 <Link to="/cart">
                     {cart.length === 0 ? '' : <li className="title-icon" id="link-right">Cart({cart.length})</li> }
-                </Link>
-                <Link to="/history">
-                    <li className="title-icon" id="link-right">Order History</li>
                 </Link>
             </ul>
         </nav>
