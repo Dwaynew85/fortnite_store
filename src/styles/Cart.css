@@ -1,4 +1,46 @@
+.cart-icon {
+    border-radius: 35px;
+}
+
 .cart-items {
     display: block;
     float: left;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.cart-text {
+    -webkit-text-stroke: .2px plum;
+    position: absolute;
+    bottom: 1%;
+    left: 15%;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    width: 70%;
+    border-radius: 0 0 35px 35px;
+}
+
+.delete {
+    position: absolute;
+    top: 10px;
+    right: 85px;
+    border-radius: 35px;
+    background: none;
+    border: none;
+    color: red;
+    font-size: 120%;
+}
+.total {
+    position: fixed;
+    right: 100px;
+    color: #fff;
+    -webkit-text-stroke: .2px #000;
+}
+
+@media only screen and (max-width: 1200px) {
+    .total {
+        position: grid;
+    }
 }
