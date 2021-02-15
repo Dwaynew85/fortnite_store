@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function OrderLi({user, items, total, created}) {
+export default function OrderItems({user, items, total, created}) {
     
     const itemLi = items.map(item => {
         return (
