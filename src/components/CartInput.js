@@ -39,9 +39,7 @@ export class CartInput extends Component {
     }
     
     render() {
-        console.log(this.state.cart) // REMOVE AFTER CONFIRMATIONS
         const { first_name, last_name, email, address } = this.state.user
-        console.log(this.state) // REMOVE AFTER CONFIRMATIONS
         return (
             <form className="cart-form" onSubmit={event => this.handleSubmit(event, this.state)}>
              <label>First Name: </label>   
