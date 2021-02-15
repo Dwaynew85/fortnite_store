@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import OrderLi from '../components/OrderLi';
+import OrderItems from '../components/OrderItems';
 import '../styles/OrderHistory.css'
 
 export default function OrderHistory({fetchOrders, orders}) {
@@ -9,12 +9,12 @@ export default function OrderHistory({fetchOrders, orders}) {
     }, [fetchOrders])
 
     const ordersList = orders.map(order => (
-        <li><OrderLi key={order.id} user={order.user} items={order.items} total={order.total} created={order.created_at} /></li>
+        <li><OrderItems key={order.id} user={order.user} items={order.items} total={order.total} created={order.created_at} /></li>
     ))
 
     return (
         <div>
-            {ordersList}
+            {orders ? ordersList : <h3>Loading...</h3>}
         </div>
     )
 }
