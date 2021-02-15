@@ -20,6 +20,7 @@
     background-size: cover;
     width: 70%;
     border-radius: 0 0 35px 35px;
+    letter-spacing: 2px;
 }
 
 .delete {
@@ -32,11 +33,18 @@
     color: red;
     font-size: 120%;
 }
+
+.delete:hover {
+    font-size: 170%;
+    -webkit-text-stroke: .3px #fff;
+}
+
 .total {
     position: fixed;
     right: 100px;
     color: #fff;
     -webkit-text-stroke: .2px #000;
+    letter-spacing: 2px;
 }
 
 @media only screen and (max-width: 1200px) {
