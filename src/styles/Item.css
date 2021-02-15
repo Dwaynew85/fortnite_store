@@ -19,6 +19,7 @@ fieldset {
 
 .itemBox {
     width: 100%;
+    overflow: hidden;
 }
 
 .itemBox:hover {
@@ -30,12 +31,13 @@ fieldset {
     position: relative;
     background-color: rgba(0, 0, 0, 0.6);
     background-size: cover;
-    width: 100%;
-    bottom: 0px;
-    border-radius: 35px;
+    width: 109%;
+    bottom: -32px;
+    left: -13px;
+    border-radius: 0 0 35px 35px;
     -webkit-text-stroke: .2px plum;
     letter-spacing: 1px;
-
+    font-size: 120%;
 }
 
 .rarity {
