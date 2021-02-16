@@ -26,7 +26,7 @@ function Cart({ cart, deleteFromCart, reset }) {
             <ul>
                 {cartLists}
             </ul>
-            <h2 className="total">Total: ${totalCost}</h2> 
+            <h2 className="total">Total: $ {totalCost}</h2> 
         </div>
     )
 }
