@@ -14,6 +14,8 @@ video {
 .detail-img {
     width: 70%;
     height: 70%;
+    object-fit: cover;
+    display: block;
 }
 
 .item-box {
@@ -22,6 +24,7 @@ video {
     margin-right: auto;
     width: 97vh;
     height: 95vh;
+    overflow: hidden;
     /* width: 70%;
     height: 65%; */
 }
@@ -32,11 +35,14 @@ video {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.6);
     background-size: cover;
-    width: 100%;
-    bottom: 0px;
-    border-radius: 35px;
+    width: 103%;
+    bottom: -15px;
+    left: -15px;
+    border-radius: 0 0 35px 35px;
     -webkit-text-stroke: .2px plum;
     letter-spacing: 1px;
+    padding-bottom: 30px;
+    padding-right: 25px;
 }
 
 @media only screen and (max-width: 800px) {
