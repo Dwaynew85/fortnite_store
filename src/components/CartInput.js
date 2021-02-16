@@ -49,6 +49,7 @@ export class CartInput extends Component {
                 onChange={event => this.handleChange(event)}
                 required
             />
+            <br/>
              <label>Last Name: </label>   
              <input type="text" 
                 value={last_name} 
