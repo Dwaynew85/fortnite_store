@@ -2,3 +2,31 @@
     width: 7%;
     height: 7%;
 }
+
+.history-item {
+    color: #fff;
+    -webkit-text-stroke: .1px plum;
+    letter-spacing: 2px;
+    border: 2px solid plum;
+    border-radius: 35px;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 0 15px;
+}
+
+.history-item h6 {
+    clear: both;
+}
+
+.history-item-child {
+    
+}
+
+.list-left {
+    float: left;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 35px;
+    margin: 10px 5px;
+    /* square border around element */
+}
