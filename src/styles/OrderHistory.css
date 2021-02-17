@@ -1,6 +1,5 @@
 .item-icon {
-    width: 7%;
-    height: 7%;
+    object-fit: fill;
 }
 
 .history-item {
@@ -19,14 +18,21 @@
     clear: both;
 }
 
-.history-item-child {
-    
-}
-
 .list-left {
     float: left;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 35px;
     margin: 10px 5px;
+    width: 10%;
+    overflow: hidden;
+    padding-top: 0;
     /* square border around element */
 }
+
+.total-right {
+    position: relative;
+    float: right;
+    right: 5%;
+}
+
+/* MOBILE SIZING REQUIRED */
