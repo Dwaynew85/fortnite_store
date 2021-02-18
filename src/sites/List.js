@@ -24,7 +24,7 @@ function List() {
     ))
 
     const sortByCost = (lists) => {
-        const sortedLists = lists.sort(function (a, b) {
+        const sortedLists = [...lists].sort(function (a, b) {
             return a.store.cost - b.store.cost
         })
         return sortedLists.map(list => (
