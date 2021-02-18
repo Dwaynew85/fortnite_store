@@ -24,9 +24,7 @@ video {
     margin-right: auto;
     width: 97vh;
     height: 95vh;
-    overflow: hidden;
-    /* width: 70%;
-    height: 65%; */
+    /* overflow: hidden; */
 }
 
 .item-detail-text {
@@ -41,7 +39,7 @@ video {
     border-radius: 0 0 35px 35px;
     -webkit-text-stroke: .2px plum;
     letter-spacing: 1px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     padding-right: 25px;
 }
 
