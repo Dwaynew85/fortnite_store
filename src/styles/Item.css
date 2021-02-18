@@ -46,6 +46,12 @@ fieldset {
     overflow: hidden;
 }
 
+.sort-btn {
+    grid-column: 1/5;
+    margin: 1em 10em 1%;
+    height: 2em;
+}
+
 @media only screen and (max-width: 985px) {
     .itemDiv {
         grid-template-columns: repeat(3, 1fr);
@@ -66,6 +72,9 @@ fieldset {
 
 @media only screen and (max-width: 650px) {
     .itemDiv {
-        grid-template-columns: none;
+        grid-template-columns: 1, 1fr;
+    }
+    .sort-btn {
+        height: 3em;
     }
 }
