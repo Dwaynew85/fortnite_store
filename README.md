@@ -1,3 +1,5 @@
+![Imgur](https://i.imgur.com/6BbjFtj.png)
+
 # Fortnite Store!
 
 To start, make sure you've cloned the Fortnite-Orders backend:
