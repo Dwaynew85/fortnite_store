@@ -4,7 +4,7 @@ function ItemDetail({ item, cart, addToCart }) {
     
     return (
         <fieldset className ="rarity item-box" style={{backgroundImage: `url(${item.background})`}}>
-            {item.media.length >=1 ? <video width="30%" height="30%" controls autoplay loop><source src={item.media[0].src} type="video/mp4" autoplay/></video> : ""}
+            {item.media.length >=1 ? <video width="30%" height="30%" autoplay="autoplay" loop="true" muted><source src={item.media[0].src} type="video/mp4" autoplay/></video> : ""}
             <legend className="item-heading"><h1>{item.name}</h1></legend>
             <img className='detail-img' src={item.images.background} alt={item.name}/>
             <div className="item-detail-text">
